@@ -67,3 +67,18 @@ _A list of my commonly used Git commands_
 
 ### Remove from Git, but keep on local
 git rm -r --cached myFolder
+
+### Git Stash
+| Command | Description |
+| ------- | ----------- |
+| git stash save “Your stash message”. | Git stash with message |
+| git stash save -u  |  Stashing untracked files  |
+| git stash save --include-untracked   | Stashing untracked files  |
+| git stash list  | Git stash list  |
+| git stash apply stash@{1}  | Git stash apply
+This command takes the top most stash in the stack and applies it to the repo. In our case it is stash@{0}  |
+| git stash pop stash@{1}  |  Will Delete the stash once applied  |
+| ------- | ----------- |
+|  git stash drop stash@{1} | Git stash drop
+This command deletes the latest stash from the stack. But use it with caution, it maybe be difficult to revert.  |
+| ------- | ----------- |
